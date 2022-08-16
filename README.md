@@ -16,7 +16,8 @@ gisnamespace
 webhoster
   image
   tag
-web_content
+web_content_folder
+web_content_repo
 
 
 
@@ -33,7 +34,8 @@ Example Playbook
   vars:
     manifest_folder: ~/geogeek_manifests
     gisnamespace: gis
-    webcontent: ~/geogeeksuite/webcontent
+    web_content_folder: ~/geogeeksuite/webcontent
+    web_content_repo: git@github.com:GeoGeekSuite/Startpage.git
     webhoster:
       image: 'httpd'
       tag: '2.4'
