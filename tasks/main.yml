@@ -14,7 +14,7 @@
     state: directory
 - name: Get content
   ansible.builtin.git:
-    repo: '{{ web_conent_repo }}'
+    repo: '{{ web_content_repo }}'
     dest: '{{ web_content_folder }}'
     single_branch: yes
     version: main
