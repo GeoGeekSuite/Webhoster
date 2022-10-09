@@ -26,7 +26,7 @@ spec:
       volumes:
         - name: webroot
           hostPath:
-            path: '{{ web_content_folder }}'
+            path: './{{ resources }}/{{ webpage }}'
             type: DirectoryOrCreate
         #- name: export
         #  persistentVolumeClaim:

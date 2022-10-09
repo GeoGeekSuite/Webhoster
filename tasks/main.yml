@@ -8,16 +8,6 @@
   template:
     src: webhoster_service.j2.yaml
     dest: '{{ manifest_folder }}/webhoster_service.yaml'
-- name: Create content folder 
-  file:
-    path: '{{ web_content_folder }}'
-    state: directory
-- name: Get content
-  ansible.builtin.git:
-    repo: '{{ web_content_repo }}'
-    dest: '{{ web_content_folder }}'
-    single_branch: yes
-    version: main
 - name: Apply Deployment
   shell:
     cmd: 'kubectl apply -f webhoster_deployment.yaml -n {{ gisnamespace }}'
