@@ -24,5 +24,5 @@ spec:
       volumes:
         - name: webroot
           hostPath:
-            path: '{{ webpage }}'
+            path: '{{ startpage }}'
             type: DirectoryOrCreate
